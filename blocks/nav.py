@@ -1,6 +1,15 @@
 components = ["""
     
     <!-- NAVIGATION -->
+    
+    <style>
+        body::before {
+            display: block;
+            content: "";
+            height: 60px;
+            }
+    </style>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4 fixed-top">
         <div class="container">
             <a href="#" class="navbar-brand"> Executive lawyer firm </a>

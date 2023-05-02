@@ -1,6 +1,8 @@
 import pathlib
 import blocks.nav
 import blocks.hero
+import blocks.newsletter
+import blocks.services
 
 print("Start building with blocks")
 print("? for help")
@@ -50,8 +52,8 @@ while True:
             elif (generate[0] == "hero"):
                 blocks.hero.hero(location, int(generate[1]))
 
-    elif (option == "nav#1"):
-        print(blocks.nav.navigations(1))
-    
-    elif (option == "hero#1"):
-        print(blocks.hero.hero(1))
+            elif (generate[0] == "newsletter"):
+                blocks.newsletter.newsletter(location, int(generate[1]))
+
+            elif (generate[0] == "services"):
+                blocks.services.services(location, int(generate[1]))
