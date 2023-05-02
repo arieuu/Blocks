@@ -3,6 +3,7 @@ import blocks.nav
 import blocks.hero
 import blocks.newsletter
 import blocks.services
+import blocks.footer
 
 print("Start building with blocks")
 print("? for help")
@@ -57,3 +58,6 @@ while True:
 
             elif (generate[0] == "services"):
                 blocks.services.services(location, int(generate[1]))
+
+            elif (generate[0] == "footer"):
+                blocks.footer.footer(location, int(generate[1]))

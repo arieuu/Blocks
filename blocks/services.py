@@ -60,7 +60,8 @@ components = ["""
             </div>
 
         </div>
-        <!--end-->
+    </section>
+    <!--end-->
 
    """]
 
