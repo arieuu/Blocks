@@ -46,8 +46,7 @@ components = ["""
 
     <!--end-->
     """,
-
-    ]
+]
 
 def nav(location, variation):
     if((variation + 1) > len(components) or variation < 0):

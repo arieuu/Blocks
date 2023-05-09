@@ -5,7 +5,21 @@ import blocks.newsletter
 import blocks.services
 import blocks.footer
 
-print("Start building with blocks")
+def listComponents():
+    print("")
+    print("     Nav: " + str(len(blocks.nav.components)))
+    print("     Hero: " + str(len(blocks.hero.components)))
+    print("     Newsletter: " + str(len(blocks.newsletter.components)))
+    print("     Services: " + str(len(blocks.services.components)))
+    print("     Footer: " + str(len(blocks.footer.components)))
+    print("")
+
+
+print("""
+        ================================
+        ========== BLOCKS 1.0 ==========
+        ================================
+""")
 print("? for help")
 
 while True:
@@ -25,10 +39,14 @@ while True:
             hero
             newsletter
             footer""")
+
+    elif(option == "list"):
+        listComponents()
     
     elif(option == "init"):
+        print("Start building with blocks:")
         print("Insert the dir path including the new dir name")
-        location = str(input("Insert a location: "))
+        location = str(input("Location: "))
         pathlib.Path(location).mkdir(parents=True, exist_ok=True)
 
         with open("./base/index.html", "r") as file:
@@ -61,3 +79,6 @@ while True:
 
             elif (generate[0] == "footer"):
                 blocks.footer.footer(location, int(generate[1]))
+
+            elif (generate[0] == "list"):
+                listComponents()
