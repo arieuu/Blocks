@@ -31,7 +31,7 @@ while True:
         exit()
 
     if (option == "?"):
-        print("Usage: [blocks.py] footer#[1,2,3,4,5]")
+        print("Usage: [blocks.py] [component]#[variation number]")
         print("Example: [blocks.py] footer#1")
         print("===========")
         print("""Available:
@@ -48,6 +48,7 @@ while True:
         print("Insert the dir path including the new dir name")
         location = str(input("Location: "))
         pathlib.Path(location).mkdir(parents=True, exist_ok=True)
+        pathlib.Path(location + "/img").mkdir(parents=True, exist_ok=True)
 
         with open("./base/index.html", "r") as file:
             base = file.read()

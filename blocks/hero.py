@@ -1,3 +1,5 @@
+import library.copyimg
+
 components = ["""
     
     <!-- HERO -->
@@ -10,14 +12,15 @@ components = ["""
             }
 
             .hero {
-                background-image: url(img/lawyer.jpeg);
+                background-image: url(img/hero0.jpeg);
                 height: 560px;
             }
         }
 
         .hero {
-            background-image: url(img/lawyer.jpeg);
+            background-image: url(img/hero0.jpeg);
         }
+
     </style>
 
         <section class="hero bg-dark text-light p-5 text-center text-sm-start p-lg-0 pt-lg-5 d-sm-flex align-items-center justify-content-center">
@@ -56,7 +59,7 @@ components = ["""
                         <div class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll"> Contact us </div>
                     </div>
 
-                    <img class="img-fluid w-50 d-none d-sm-block" src="img/showcase.svg" alt="">
+                    <img class="img-fluid w-50 d-none d-sm-block" src="img/hero1.svg" alt="">
                 </div>
             </div>
         </section>
@@ -78,3 +81,8 @@ def hero(location, variation):
 
         with open(location + "/index.html", "w") as page:
             page.write(content)
+
+
+        # Copying image over if there's one
+
+        library.copyimg.copyimg("hero", variation, location)

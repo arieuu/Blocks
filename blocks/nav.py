@@ -1,3 +1,5 @@
+import library.copyimg
+
 components = ["""
     
     <!-- NAVIGATION -->
@@ -61,3 +63,8 @@ def nav(location, variation):
 
         with open(location + "/index.html", "w") as page:
             page.write(content)
+
+        
+        # Copying image over if there's one
+
+        library.copyimg.copyimg("nav", variation, location)

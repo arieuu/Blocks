@@ -1,3 +1,5 @@
+import library.copyimg
+
 components = ["""
     
     <!-- Footer -->
@@ -27,3 +29,8 @@ def footer(location, variation):
 
         with open(location + "/index.html", "w") as page:
             page.write(content)
+
+
+        # Copying image over if there's one
+
+        library.copyimg.copyimg("nav", variation, location)

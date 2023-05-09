@@ -1,3 +1,5 @@
+import library.copyimg
+
 components = ["""
     
     <!-- NEWSLETTER -->
@@ -31,3 +33,8 @@ def newsletter(location, variation):
 
         with open(location + "/index.html", "w") as page:
             page.write(content)
+
+        
+        # Copying image over if there's one
+
+        library.copyimg.copyimg("nav", variation, location)
