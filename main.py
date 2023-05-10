@@ -7,11 +7,12 @@ import blocks.footer
 
 def listComponents():
     print("")
-    print("     Nav: " + str(len(blocks.nav.components)))
-    print("     Hero: " + str(len(blocks.hero.components)))
-    print("     Newsletter: " + str(len(blocks.newsletter.components)))
-    print("     Services: " + str(len(blocks.services.components)))
-    print("     Footer: " + str(len(blocks.footer.components)))
+    print("Components:")
+    print("Nav: " + str(len(blocks.nav.components)))
+    print("Hero: " + str(len(blocks.hero.components)))
+    print("Newsletter: " + str(len(blocks.newsletter.components)))
+    print("Services: " + str(len(blocks.services.components)))
+    print("Footer: " + str(len(blocks.footer.components)))
     print("")
 
 
@@ -31,14 +32,16 @@ while True:
         exit()
 
     if (option == "?"):
-        print("Usage: [blocks.py] [component]#[variation number]")
-        print("Example: [blocks.py] footer#1")
-        print("===========")
-        print("""Available:
-            nav
-            hero
-            newsletter
-            footer""")
+        print()
+        print("Usage: [blocks.py] [component]#[variation]")
+        print("Example: [blocks.py] hero#1")
+        print()
+        print("Commands:")
+        print()
+        print("init: Change to generate mode")
+        print("list: List total available components")
+        print("?: Display this help message")
+        print()
 
     elif(option == "list"):
         listComponents()
@@ -57,10 +60,11 @@ while True:
             page.write(base)
 
         print("[Base site generated]")
+        print()
 
         while True:
             try:
-                generate = str(input("(Generate) => ")).split("#")
+                generate = str(input("(Generate) > ")).split("#")
             
             except KeyboardInterrupt:
                 print("Finished")
@@ -83,3 +87,7 @@ while True:
 
             elif (generate[0] == "list"):
                 listComponents()
+    
+    elif("#" in option):
+        print("[init] to turn on generate mode")
+        print()
