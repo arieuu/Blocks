@@ -11,5 +11,5 @@ Clone repo and run [main.py]
 Example: [blocks.py] hero#1
 
 commands:    
-init: Change to generate mode
-list: List total available components
+init: Change to generate mode  
+list: List total available components  
