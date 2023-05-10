@@ -10,6 +10,6 @@ Clone repo and run [main.py]
 [blocks.py] [component]#[variation]
 Example: [blocks.py] hero#1
 
-commands:  
+commands:    
 init: Change to generate mode
 list: List total available components
