@@ -43,6 +43,9 @@ while True:
         print()
         print("init: Change to generate mode")
         print("list: List total available components")
+        print("update: Update visualizer and all it's components")
+        print("     Open the 'display' dir inside the project folder to see components")
+        print()
         print("?: Display this help message")
         print()
 
