@@ -14,5 +14,4 @@ def copyimg(section, variation, path):
             # If destination already exists it will be replaced
 
             shutil.copy("blocks/img/" + name, path + "/img/")
-            print("done")
         

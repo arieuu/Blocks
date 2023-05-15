@@ -4,6 +4,7 @@ import blocks.hero
 import blocks.newsletter
 import blocks.services
 import blocks.footer
+import library.update
 
 def listComponents():
     print("")
@@ -22,6 +23,8 @@ print("""
         ================================
 """)
 print("? for help")
+
+# Default menu
 
 while True:
     try:
@@ -62,6 +65,8 @@ while True:
         print("[Base site generated]")
         print()
 
+        # Generate mode menu
+
         while True:
             try:
                 generate = str(input("(Generate) > ")).split("#")
@@ -91,3 +96,6 @@ while True:
     elif("#" in option):
         print("[init] to turn on generate mode")
         print()
+
+    elif(option == "update"):
+        library.update.update()
