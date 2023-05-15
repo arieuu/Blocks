@@ -7,7 +7,7 @@ Bootstrap 5 template generator
 Clone repo and run [main.py]
 
 # Usage:
-[blocks.py] [component]#[variation]
+[blocks.py] [component]#[variation]   
 Example: [blocks.py] hero#1
 
 commands:    
